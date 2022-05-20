@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Finn_\Documents\Diss Stuff\MelAI\venv"
+VIRTUAL_ENV="C:\Users\Finn_\Documents\MelAI\MelAI\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
