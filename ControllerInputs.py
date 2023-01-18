@@ -4,6 +4,7 @@ import argparse
 import signal
 import sys
 import random
+import TensorFlowNet
 
 def RandomInputButton(RandNum):
     match RandNum:
@@ -59,6 +60,7 @@ while True:
     if gamestate.menu_state in [melee.Menu.IN_GAME, melee.Menu.SUDDEN_DEATH]:
         #print(gamestate.players[1].action)
         if gamestate.players[1].action == melee.enums.Action.STANDING or gamestate.players[1].action == melee.enums.Action.CROUCHING or gamestate.players[1].action == melee.enums.Action.DASHING or gamestate.players[1].action == melee.enums.Action.FALLING or gamestate.players[1].action == melee.enums.Action.FALLING_BACKWARD or gamestate.players[1].action == melee.enums.Action.FALLING_FORWARD or gamestate.players[1].action == melee.enums.Action.ON_HALO_DESCENT or gamestate.players[1].action == melee.enums.Action.ON_HALO_WAIT or gamestate.players[1].action == melee.enums.Action.RUNNING or gamestate.players[1].action == melee.enums.Action.SHIELD or gamestate.players[1].action == melee.enums.Action.TUMBLING or gamestate.players[1].action == melee.enums.Action.EDGE_HANGING :
+            controller.release_all()
             RandomInputButton(random.randint(1, 6))
             RandomStickInput(random.uniform(0, 1), random.uniform(0, 1))
             controller.flush()
